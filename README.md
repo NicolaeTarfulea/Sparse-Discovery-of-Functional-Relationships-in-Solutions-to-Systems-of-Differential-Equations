@@ -1,21 +1,21 @@
 # Sparse-Discovery-of-Functional-Relationships-in-Solutions-to-Systems-of-Differential-Equations
-This repository accompanies the work:  *Sparse Discovery of Functional Relationships in Solutions to Systems of Differential Equations*. 
+This repository accompanies the work:  *Finding Functional Relationships in Solutions to Systems of ODEs*. 
 It provides a MATLAB implementation for discovering functional relationships among solution components of 
-first-order systems of ordinary differential equations. The method leverages sparse identification 
+first-order systems of ordinary differential equations. The method leverages nullspace identification 
 techniques applied to numerical solutions of initial-value problems. The core assumption is that only a 
 small number of terms govern the relationships between solution components, allowing the underlying structure 
 to be identified efficiently.
 
 **Features:**
-* Sparse identification of relationships among ODE solution components  
+* Identification of relationships among ODE solution components  
 * General-purpose MATLAB implementation  
 * Applicable to nonlinear dynamical systems  
 * Visualization of identified relationships and constraint preservation 
 
 **Repository Structure:**
 1. `functional_relationships.m` — Main algorithm implementation  
-2. `enzyme.m` — Enzyme dynamics model (Subsection 4.1)  
-3. `glycolytic.m` — Glycolytic oscillator model (Subsection 4.2) 
+2. `enzyme.m` — Enzyme dynamics model (Subsection 4.1 (IV A))  
+3. `glycolytic.m` — Glycolytic oscillator model (Subsection 4.2 (IV B)) 
 
 **Code description:**
 The MATLAB function that implements the algorithm presented in the paper is named *functional\_relationships*. 
@@ -33,11 +33,11 @@ The output consists of the relationship between the solution components and grap
 
 Comprehensive usage instructions and explanatory comments are included within the function's body.
 
-The enzyme dynamics model described by equations (9)-(12) in Subsection 4.1 of the paper is defined by the MATLAB function 
+The enzyme dynamics model described by equations (9) in Subsection 4.1 (IV A) of the paper is defined by the MATLAB function 
 called *enzyme*. The input of this function consist of time, t, and vector function X, whose components X(1), X(2), X(3), and X(4) 
 correspond to the concentrations C_1(t), E(t), S(t), and P(t), respectively.
 
-The glycolytic oscillator model described by equations (16)-(22) in Subsection 4.2 of the paper is defined by the MATLAB function 
+The glycolytic oscillator model described by equations (14) in Subsection 4.2 (IV B) of the paper is defined by the MATLAB function 
 called *glycolytic*. The input of this function consist of time, t, and vector function X, whose components X(1),..., X(7) 
 correspond to the concentrations of seven biochemical species S_1(t),..., S_7(t), respectively.
 
